@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
         Computer computer = new Computer("IBM", 80000);
-        computer.save();
+        SaveComputer saveComputer = new SaveComputer();
+        saveComputer.saveToFile("некий путь" , computer);
     }
 }
 

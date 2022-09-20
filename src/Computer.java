@@ -7,11 +7,11 @@ public class Computer {
         this.memorySize = memorySize;
     }
 
-    public void save(){
-        System.out.println("Сохранение обьекта класса в файл");
-    }
-
-    public void load(){
-        System.out.println("Загрузка обьекта класса из файла");
-    }
+//    public void save(){
+//        System.out.println("Сохранение обьекта класса в файл");
+//    }
+//
+//    public void load(){
+//        System.out.println("Загрузка обьекта класса из файла");
+//    }
 }
