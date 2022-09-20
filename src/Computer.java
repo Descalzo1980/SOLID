@@ -6,12 +6,4 @@ public class Computer {
         this.name = name;
         this.memorySize = memorySize;
     }
-
-//    public void save(){
-//        System.out.println("Сохранение обьекта класса в файл");
-//    }
-//
-//    public void load(){
-//        System.out.println("Загрузка обьекта класса из файла");
-//    }
 }
