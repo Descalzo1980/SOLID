@@ -14,4 +14,6 @@ public class Line implements Shape{
     public void drawRect() {
 
     }
+
+    /*нарушие 4 принципа*/
 }

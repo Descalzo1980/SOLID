@@ -6,6 +6,11 @@ public class Main {
         saveComputer.save("некий путь" , computer);
         saveComputerToFile.save("некий путь" , computer);
         test();
+        ModelForm modelForm = new ModelForm(1,55,"John Smith");
+        WebFramework webFramework = new WebFramework();
+        webFramework.save(modelForm);
+
+        /*эти три класса нарушают принцип. поскольку завязаны напрямую с ModelForm*/
     }
 
     public static void test(){
@@ -21,6 +26,7 @@ public class Main {
 
         /*Из за переопределения метода проверка не проходит*/
     }
+
 }
 
 /*
@@ -62,5 +68,10 @@ public class Main {
 * - принцип инверсии зависимости
 *
 *«Зависимость на Абстракциях. Нет зависимости на что-то конкретное».
-
+* наши классы долдны зависить от абстракции.
+*эти три класса нарушают принцип. поскольку завязаны напрямую с ModelForm
+* То есть надо создать интерфейс
+*
 * */
+
+
