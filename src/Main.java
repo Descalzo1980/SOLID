@@ -1,10 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        Computer computer = new Computer("IBM", 80000);
+        Computer computer = new Computer("IBM", 5000);
         SaveInterface saveComputer = new SaveComputerToFile();
         SaveInterface saveComputerToFile = new SaveComputerToDB();
         saveComputer.save("некий путь" , computer);
         saveComputerToFile.save("некий путь" , computer);
+        test();
+    }
+
+    public static void test(){
+        Computer computer = new Computer("IBM", 5000);
+        Computer omenHP = new OmenHP("Omen HP", 5000);
+
+        omenHP.setData("IBM");
+        if(computer.name.compareTo(omenHP.name) == 0 && computer.memorySize == omenHP.memorySize){
+            System.out.println("Тест окей");
+        }else {
+            System.out.println("Какая то ошибка");
+        }
+
+        /*Из за переопределения метода проверка не проходит*/
     }
 }
 
@@ -25,13 +40,14 @@ public class Main {
  * - принцип открытости закрытости
  * этот принцип предполагает что классы д.б. закрыты для модификации но открыты для расширения
  * класс SaveComputer нарушает этот принцип. Для соблюдения можем использовать полиморфизм и абстрактные классы
- * АК реализуем через интерфейсы Сделаем класс для разных методов.Добавляем новый функционал добавляя новые классы
- * и реализуя интерфейс с его методом
+ * Сделаем класс для разных методов.Добавляем новый функционал добавляя новые классы
+ * и реализуя интерфейс с его методом. Короче не надо модифицировать классы, но добавляем новые классы или интерфейсы
  *
  *
  * * - принцип подстановки Барбары Лисков
 *«функции, которые используют базовый тип, должны иметь
 * возможность использовать подтипы базового типа не зная об этом».
+* Подклассы должны заменять свои базовые классы. Есть два метода setData в классах Computer и OmenHP. И они разные. Дети, эт плохо.
 
 
 *
